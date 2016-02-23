@@ -146,6 +146,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &942182055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 942182058}
+  - 114: {fileID: 942182057}
+  - 114: {fileID: 942182056}
+  m_Layer: 0
+  m_Name: Labirintus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &942182056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942182055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1af4f723babc41b2810afd05af7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Padlo: {fileID: 132852, guid: 54975eebd45044a40bdfce5dfee8a224, type: 2}
+  Fal: {fileID: 136926, guid: dd6bbcd84b6d0dd45bed05790bc38cfe, type: 2}
+  MeretX: 1
+  MeretZ: 1
+--- !u!114 &942182057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942182055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7f0c104e87bde42a574bfa2a3c41ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Terkep: block-maze-2.txt
+  FalKarakter: 35
+--- !u!4 &942182058
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942182055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &1092329711
 GameObject:
   m_ObjectHideFlags: 0
