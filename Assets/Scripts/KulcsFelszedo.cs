@@ -16,6 +16,9 @@ public class KulcsFelszedo : MonoBehaviour {
     {
         if (other.tag == "Kulcs")
         {
+			kulcsok = kulcsok + 1;
+			KijelzoFrissit ();
+			Destroy (other.gameObject);
             //Kulccsal ütköztünk!
         }
     }
