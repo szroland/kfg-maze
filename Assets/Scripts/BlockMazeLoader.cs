@@ -10,6 +10,7 @@ public class BlockMazeLoader : MonoBehaviour, BlockMazeGenerator {
 
     public string Terkep;
     public char FalKarakter = '#';
+    public char KulcsKarakter = 'K';
    
     public BlockMaze generate()
     {
@@ -17,16 +18,18 @@ public class BlockMazeLoader : MonoBehaviour, BlockMazeGenerator {
         int sorok = lines.Length;
         int sorhossz = Leghosszabb(lines);
 
-        bool[,] maze = new bool[sorok,sorhossz];
+        bool[,] fal = new bool[sorok, sorhossz];
+        bool[,] kulcs = new bool[sorok, sorhossz];
         for (int x=0; x<sorok; x++)
         {
             for (int y=0; y<lines[x].Length; y++)
             {
-                maze[x, y] = FalKarakter == lines[x][y];
+                fal[x, y] = FalKarakter == lines[x][y];
+                kulcs[x, y] = KulcsKarakter == lines[x][y];
             }
             
         }
-        return new BlockMaze(maze);        
+        return new BlockMaze(fal, kulcs);        
     }
 
     private int Leghosszabb(string[] lines)

@@ -5,9 +5,10 @@ public class BlockMazeDisplay : MonoBehaviour {
 
     public GameObject Padlo;
     public GameObject Fal;
+    public GameObject Kulcs;
 
-    public float MeretX = 1;
-    public float MeretZ = 1;
+    public float BlokkMeretX = 1;
+    public float BlokkMeretZ = 1;
 
     private BlockMazeGenerator generator;
     private BlockMaze maze;
@@ -16,6 +17,26 @@ public class BlockMazeDisplay : MonoBehaviour {
 
         generator = GetComponent<BlockMazeGenerator>();
         maze = generator.generate();
+
+        for (int i=0; i<maze.MeretX; i++)
+        {
+            for (int j=0; j<maze.MeretY; j++)
+            {
+                Vector3 pos = new Vector3(i, 0, j);
+                if (maze.Fal(i, j))
+                {
+                    Letrehoz(pos, Fal);
+                }
+                else
+                {
+                    Letrehoz(pos, Padlo);
+                    if (maze.Kulcs(i, j))
+                    {
+                        Letrehoz(pos, Kulcs);
+                    }
+                }
+            }
+        }
 
 	}
 

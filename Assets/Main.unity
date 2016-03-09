@@ -176,8 +176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Padlo: {fileID: 132852, guid: 54975eebd45044a40bdfce5dfee8a224, type: 2}
   Fal: {fileID: 136926, guid: dd6bbcd84b6d0dd45bed05790bc38cfe, type: 2}
-  MeretX: 1
-  MeretZ: 1
+  Kulcs: {fileID: 113204, guid: 213f4f75b06e2784f91754cbdc72a811, type: 2}
+  BlokkMeretX: 1
+  BlokkMeretZ: 1
 --- !u!114 &942182057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Terkep: block-maze-2.txt
   FalKarakter: 35
+  KulcsKarakter: 75
 --- !u!4 &942182058
 Transform:
   m_ObjectHideFlags: 0
