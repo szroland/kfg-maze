@@ -15,15 +15,6 @@ public class Block
 		data = c;
 	}
 
-	public static implicit operator char (Block b)
-	{
-		return b.data;
-	}
-
-	public static implicit operator Block (char b)
-	{
-		return new Block (b);
-	}
 }
 
 public class BlockMaze
@@ -45,17 +36,17 @@ public class BlockMaze
 
 	public bool Fal (int x, int y)
 	{
-		return maze [x, y] == Block.fal;
+		return maze [x, y].data == Block.fal;
 	}
 
 	public bool Kulcs (int x, int y)
 	{
-		return maze [x, y] == Block.kulcs;
+		return maze [x, y].data == Block.kulcs;
 	}
 
 	public bool Ajto (int x, int y)
 	{
-		return maze [x, y] == Block.ajto;
+		return maze [x, y].data == Block.ajto;
 	}
 
 	public int MeretX {
