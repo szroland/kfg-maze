@@ -19,14 +19,11 @@ public class BlockMazeDisplay : MonoBehaviour
 		generator = GetComponent<BlockMazeGenerator> ();
 		maze = generator.generate ();
 
-		GameObject plane = GameObject.Find ("Plane");
-		//plane.transform.localScale = new Vector3 (maze.MeretX/10f, 1f, maze.MeretY/10f);
-		//plane.transform.position = new Vector3 ((maze.MeretX-1) / 2f, -0.1f, (maze.MeretY) / 2f);
 		for (int x = 0; x < maze.MeretX; x++) {
 			for (int y = 0; y < maze.MeretY; y++) {
 				var d = maze [x, y];
 				var pos = new Vector3 (x, 0, y);
-				switch (d) {
+				switch (d.data) {
 				case Block.fal:
 					Letrehoz (pos, Fal);
 					break;

@@ -28,9 +28,6 @@ public class BlockMaze
 
 	public BlockMaze (int x,int y)
 	{
-		Block b = new Block ('#');
-		char c = 'C';
-		b = c;
 		maze = new Block[x, y];
 	}
 

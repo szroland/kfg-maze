@@ -22,7 +22,7 @@ public class BlockMazeLoader : MonoBehaviour, BlockMazeGenerator
 		BlockMaze maze = new BlockMaze (sorok, sorhossz);
 		for (int x = 0; x < sorok; x++) {
 			for (int y = 0; y < lines [x].Length; y++) {
-				maze [x, y] = lines [x] [y];
+				maze [x, y] = new Block(lines [x] [y]);
 			}            
 		} 
 		return maze;
