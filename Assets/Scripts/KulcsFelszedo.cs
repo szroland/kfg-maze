@@ -4,7 +4,7 @@ using System.Collections;
 
 public class KulcsFelszedo : MonoBehaviour {
 
-    private int kulcsok = 0;
+    public int kulcsok = 0;
     public Text kijelzo;
    
 	// Use this for initialization

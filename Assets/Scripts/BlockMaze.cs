@@ -1,44 +1,73 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public class Block
+{
+	public const char padlo = ' ';
+	public const char fal = '#';
+	public const char ajto = 'A';
+	public const char kulcs = 'K';
 
-/*
-Olyan labirintus definicioja, amely téglalap alakú, és minden pontjában vagy fal van, vagy üres.
-*/
-public class BlockMaze {
+	public char data;
 
-    private bool[,] fal;
-    private bool[,] kulcs;
+	public Block (char c)
+	{
+		data = c;
+	}
 
-    public BlockMaze(bool[,] fal, bool[,] kulcs)
-    {
-        this.fal = fal;
-        this.kulcs = kulcs;
-    }
+	public static implicit operator char (Block b)
+	{
+		return b.data;
+	}
 
-    public bool Fal(int x, int y)
-    {
-        return fal[x,y];
-    }
+	public static implicit operator Block (char b)
+	{
+		return new Block (b);
+	}
+}
 
-    public bool Kulcs(int x, int y)
-    {
-        return kulcs[x, y];
-    }
+public class BlockMaze
+{
+	private Block[,] maze;
 
-    public int MeretX
-    {
-        get { return fal.GetLength(0); }
-    }
+	public Block this [int x, int y] {
+		get{ return maze [x, y]; }
+		set{ maze [x, y] = value; }
+	}
 
-    public int MeretY
-    {
-        get { return fal.GetLength(1); }
-    }
+	public BlockMaze (int x,int y)
+	{
+		Block b = new Block ('#');
+		char c = 'C';
+		b = c;
+		maze = new Block[x, y];
+	}
 
+	public bool Fal (int x, int y)
+	{
+		return maze [x, y] == Block.fal;
+	}
+
+	public bool Kulcs (int x, int y)
+	{
+		return maze [x, y] == Block.kulcs;
+	}
+
+	public bool Ajto (int x, int y)
+	{
+		return maze [x, y] == Block.ajto;
+	}
+
+	public int MeretX {
+		get { return maze.GetLength (0); }
+	}
+
+	public int MeretY {
+		get { return maze.GetLength (1); }
+	}
 }
 
 public interface BlockMazeGenerator
 {
-    BlockMaze generate();
+	BlockMaze generate ();
 }

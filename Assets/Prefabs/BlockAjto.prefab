@@ -12,7 +12,7 @@ GameObject:
   - 65: {fileID: 6544838}
   - 23: {fileID: 2318856}
   m_Layer: 0
-  m_Name: BlockFal
+  m_Name: BlockAjto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4c42d99573345e0468bdc4f961bd0942, type: 2}
+  - {fileID: 2100000, guid: 8feda91feeb83a44ab20b29e823cd3a9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
